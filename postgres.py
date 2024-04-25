@@ -37,7 +37,7 @@ class Organization:
         return all([self.id, self.name, self.type, self.created_by, self.creation_date, self.updated_on, self.updated_by])
 
     def format_date(self, date_str):
-        return datetime.strptime(date_str, "%m/%d/%Y").strftime("%d-%m-%Y") if date_str else None
+        return datetime.strptime(date_str, "%m/%d/%Y").strftime("%Y-%m-%d") if date_str else None
 
 def connect_to_database():
     try:
